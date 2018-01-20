@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family:"microsoft yahei";
+}
+ul,li{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+@keyframes spin{
+      from{
+        transform:rotate(0deg);
+      }
+      to{
+        transform:rotate(360deg);
+      }
+    }
+
+.bgimg{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left:calc(50% - 100px);
+  top:20%;
+  border-radius: 50%;
+  background-size: cover;
+  filter: blur(4px);
+}
+.bgimg.rotate{
+  animation-name:spin;
+  animation-duration:4s;
+  animation-iteration-count:infinite;/*无限转*/
+  animation-timing-function: linear;/*匀速转*/
+}
+.musicbox {
+  position: absolute;
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: pink;
+  box-shadow: 2px 2px 2px 2px rgba(12, 2, 3, 0.5)
+}
+.box{
+  margin:20px 25px 10px 20px;
+}
+.boxtop .control{
+  float: left;
+  top:10px;
+  font-size:0px;
+  color:skyblue;
+}
+.boxtop .control i{
+  font-size: 50px;
+  cursor: pointer;
+}
+.boxtop .info{
+  margin-left:170px;
+}
+.boxtop .info .title{
+  font-size: 20px;  
+}
+
+
+.boxbottom .bar{
+  height:3px;
+  background:grey;
+  margin-top:10px;
+  cursor: pointer;
+}
+.boxbottom .bar .progressnow{
+  width:0;
+  height: 3px;
+  background: black;
+}
+.boxbottom .time{
+  float: right;
+}
+.musiclist li{
+  border-top: 1px solid red;
+  cursor: pointer;
+}
+.musiclist li span{
+  margin-left: 15px;
+}
+.musiclist li.active{
+  border-left:3px solid red
+}
